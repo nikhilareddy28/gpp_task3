@@ -1,6 +1,6 @@
-# Custom CSV Reader and Writer Project 
+# custom_reader.py
 """
-Custom CSV Reader and Writer
+Custom CSV Reader
 """
 
 class CustomCsvReader:
@@ -22,6 +22,7 @@ class CustomCsvReader:
         while True:
             char = self.file.read(1)
 
+            # End of file
             if not char:
                 if field or row:
                     row.append(field)
@@ -29,9 +30,9 @@ class CustomCsvReader:
                 raise StopIteration
 
             if char == '"':
-
                 if in_quotes:
                     next_char = self.file.read(1)
+                    # Escaped quote
                     if next_char == '"':
                         field += '"'
                     else:
@@ -41,11 +42,11 @@ class CustomCsvReader:
                 else:
                     in_quotes = True
 
-            elif char == ',' and not in_quotes:
+            elif char == "," and not in_quotes:
                 row.append(field)
                 field = ""
 
-            elif char == '\n' and not in_quotes:
+            elif char == "\n" and not in_quotes:
                 row.append(field)
                 return row
 
@@ -53,22 +54,5 @@ class CustomCsvReader:
                 field += char
 
 
-class CustomCsvWriter:
-    """CSV writer implementation."""
-
-    @staticmethod
-    def _escape(field: str) -> str:
-        if any(x in field for x in ['"', ',', '\n']):
-            field = field.replace('"', '""')
-            return f"\"{field}\""
-        return field
-
-    def write(self, file_path, rows):
-        with open(file_path, "w", encoding="utf-8") as f:
-            for row in rows:
-                escaped = [self._escape(field) for field in row]
-                f.write(",".join(escaped) + "\n")
-
-
 if __name__ == "__main__":
-    print("Custom CSV module loaded.")
+    print("Custom CSV Reader loaded.")
