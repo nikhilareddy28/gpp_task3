@@ -27,3 +27,10 @@ custom-csv/
 ## 🚀 Setup Instructions
 
 ### 1. Create project folder
+
+### 2. Create virtual environment
+
+### 3. Activate environment (Windows) 
+
+
+### ▶️ Running the Benchmark
