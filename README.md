@@ -30,7 +30,7 @@ custom-csv/
 
 ### 2. Create virtual environment
 
-### 3. Activate environment (Windows) 
+### 3. Activate environment 
 
 
 ### ▶️ Running the Benchmark
