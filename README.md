@@ -10,19 +10,24 @@ It includes:
 
 The goal is to understand how CSV parsing works internally and measure performance differences between pure Python and optimized CSV libraries.
 
+
+
+Here is your **project structure in clean, correct, professional Markdown format**:
+
 ---
 
 ## 📁 Project Structure
 
+```
 custom-csv/
 │
-├── custom_reader.py       # Custom CSV reader implementation
-├── custom_writer.py       # Custom CSV writer implementation
-├── benchmark.py           # Benchmark script (small + large CSV)
-├── test.csv               # Generated test file
-└── big.csv                # Generated large file (1M rows)
+├── custom_reader.py        # Custom CSV reader implementation
+├── custom_writer.py        # Custom CSV writer implementation
+├── benchmark.py            # Benchmark script for small & large CSV files
+├── test.csv                # Generated test file (sample data)
+└── big.csv                 # Generated large CSV file (1M rows)
+```
 
----
 
 ## 🚀 Setup Instructions
 
