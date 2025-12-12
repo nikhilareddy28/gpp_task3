@@ -21,6 +21,7 @@ Here is your **project structure in clean, correct, professional Markdown format
 ```
 custom-csv/
 │
+├── README.md  
 ├── custom_reader.py        # Custom CSV reader implementation
 ├── custom_writer.py        # Custom CSV writer implementation
 ├── benchmark.py            # Benchmark script for small & large CSV files
